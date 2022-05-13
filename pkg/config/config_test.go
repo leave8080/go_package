@@ -25,6 +25,7 @@ func TestParse(t *testing.T) {
 		log.Error(err)
 		return
 	}
+	log.Debug(">>")
 	log.Debug(c.Name)
 	log.Debug(c.Number)
 	log.Debug(c.Web)
