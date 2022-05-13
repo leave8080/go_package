@@ -1,0 +1,19 @@
+dev:
+  Name: go_package
+  Number: 10086
+  Web:
+    Port: :8080
+    Limit:
+      Rate: 10
+      BucketSize: 10
+  Redis:
+    Addrs:
+      - 127.0.0.1:6379
+    Password: mxchip
+    DB: 1
+  MySQL:
+    DSN: uname:password@tcp(127.0.0.1:3306)/test?timeout=10s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8mb4,utf8
+    Active: 1000
+    Idle: 100
+    IdleTimeout: 60
+    ShowSQL: true
