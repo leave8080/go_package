@@ -1,0 +1,40 @@
+kind: reverse
+name: mx_cloud
+source:
+  database: mysql
+  conn_str: vbs9010:zhrmghg@202004@tcp(rm-uf6widf3gbg44c281bo.mysql.rds.aliyuncs.com:3306)/mx_cloud?timeout=2s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8mb4,utf8
+targets:
+  - type: codes
+    language: golang
+    #    include_tables:
+    #      - a
+    #      - b
+    #    exclude_tables:
+    #      - c
+    table_mapper: snake
+    column_mapper: snake
+    table_prefix: ""
+    multiple_files: false
+    template_path: ./template/goxorm.tmpl
+    output_dir: .
+
+
+#kind: reverse
+#name: vbs9010
+#source:
+#  database: mysql
+#  conn_str: root:mxchip@2019@tcp(106.14.218.147:3306)/vbs9010?timeout=2s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8,utf8mb4
+#targets:
+#  - type: codes
+#    language: golang
+#    #    include_tables:
+#    #      - a
+#    #      - b
+#    #    exclude_tables:
+#    #      - c
+#    table_mapper: snake
+#    column_mapper: snake
+#    table_prefix: ""
+#    multiple_files: false
+#    template_path: ./template/goxorm.tmpl
+#    output_dir: .
